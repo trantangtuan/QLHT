@@ -104,7 +104,7 @@
     <None Include="DataClasses1.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>DataClasses1.designer.cs</LastGenOutput>
-      <
+      
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
