@@ -138,3 +138,10 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
+<Target Name="pipelinePreDeployCopyAllFilesToOneFolder">
+   <Message Text="Copying all files to publish folder..." Importance="high" />
+   <ItemGroup>
+      <FilesToCopy Include="$(OutputPath)\**\*" />
+   </ItemGroup>
+   <Copy SourceFiles="@(FilesToCopy)" DestinationFolder="\published\" />
+</Target>
