@@ -152,4 +152,20 @@
   </Target>
 
 </Project>
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+
+  <Target Name="pipelinePreDeployCopyAllFilesToOneFolder">
+    <Message Text="Copying all files to publish folder..." Importance="high" />
+    <ItemGroup>
+      <FilesToCopy Include="$(OutputPath)\**\*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(FilesToCopy)" DestinationFolder="$(OutputPath)\published\" />
+  </Target>
+
+</Project>
+
 
