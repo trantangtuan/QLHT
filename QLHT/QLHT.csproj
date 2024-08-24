@@ -137,11 +137,19 @@
     <None Include="Resources\Paomedia-Small-N-Flat-Lock.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-</Project>
-<Target Name="pipelinePreDeployCopyAllFilesToOneFolder">
-   <Message Text="Copying all files to publish folder..." Importance="high" />
-   <ItemGroup>
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+
+  <Target Name="pipelinePreDeployCopyAllFilesToOneFolder">
+    <Message Text="Copying all files to publish folder..." Importance="high" />
+    <ItemGroup>
       <FilesToCopy Include="$(OutputPath)\**\*" />
-   </ItemGroup>
-   <Copy SourceFiles="@(FilesToCopy)" DestinationFolder="\published\" />
-</Target>
+    </ItemGroup>
+    <Copy SourceFiles="@(FilesToCopy)" DestinationFolder="$(OutputPath)\published\" />
+  </Target>
+
+</Project>
+
