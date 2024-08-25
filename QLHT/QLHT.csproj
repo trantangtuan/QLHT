@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
@@ -11,6 +10,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems> <!-- Vô hiệu hóa mặc định -->
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -35,6 +35,23 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <!-- Explicitly include all the source files -->
+    <Compile Include="addPhongBan.cs" />
+    <Compile Include="addPhongBan.Designer.cs" />
+    <Compile Include="DataClasses1.designer.cs" />
+    <Compile Include="Login.cs" />
+    <Compile Include="Login.Designer.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs" />
+    <Compile Include="Properties\Settings.Designer.cs" />
+    <Compile Include="QLDM.cs" />
+    <Compile Include="QLDM.Designer.cs" />
+    <Compile Include="repairPhongBan.cs" />
+    <Compile Include="repairPhongBan.Designer.cs" />
+    <Compile Include="SelectMaPb.cs" />
+    <Compile Include="UserInfo.cs" />
+    
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
