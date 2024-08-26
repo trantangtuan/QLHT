@@ -10,8 +10,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <EnableDefaultCompileItems>false</EnableDefaultCompileItems> <!-- Vô hiệu hóa Compile mặc định -->
-    <EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems> <!-- Vô hiệu hóa EmbeddedResource mặc định -->
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -36,7 +36,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <!-- Explicitly include all the source files -->
     <Compile Include="addPhongBan.cs" />
     <Compile Include="addPhongBan.Designer.cs" />
     <Compile Include="DataClasses1.designer.cs" />
@@ -68,7 +67,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <!-- Explicitly include all the embedded resources -->
     <EmbeddedResource Include="addPhongBan.resx">
       <DependentUpon>addPhongBan.cs</DependentUpon>
     </EmbeddedResource>
